@@ -89,7 +89,7 @@ void PhoneBook::search(void)
 		else
 			std::cout << std::setw(10) << this->contacts[i].get_last_name() << "|";
 		if (this->contacts[i].get_nickname().length() > 9)
-			std::cout << std::setw(10) << i << "|" << this->contacts[i].get_nickname().substr(0,9) + "." << "|" << std::endl;
+			std::cout << std::setw(10) << this->contacts[i].get_last_name().substr(0,9) + "." << "|" << std::endl;
 		else
 			std::cout << std::setw(10) << this->contacts[i].get_nickname() << "|" << std::endl;
 	}
