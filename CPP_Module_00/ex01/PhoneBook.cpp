@@ -63,11 +63,17 @@ void PhoneBook::add(void)
 		std::getline(std::cin, ds);
 		if (ds.empty())
 			continue;
-        for (int i = this->max - 1; i > 0; i--)
-            this->contacts[i] = this->contacts[i - 1];
-        this->contacts[0].set_contact(fn, ln, nn, pn, ds);
-        if (this->max < 8)
+        if (this->max >= 8)
+        {
+            for (int i = this->max - 1; i > 0; i--)
+                this->contacts[i] = this->contacts[i - 1];
+            this->contacts[0].set_contact(fn, ln, nn, pn, ds);
+        }
+        else
+        {
+            this->contacts[this->max].set_contact(fn, ln, nn, pn, ds);
             this->max++;
+        }
         break;
     }
 }
