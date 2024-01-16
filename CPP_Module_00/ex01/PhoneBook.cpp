@@ -63,18 +63,19 @@ void PhoneBook::add(void)
 		std::getline(std::cin, ds);
 		if (ds.empty())
 			continue;
-		this->contacts[this->id++].set_contact(fn,ln,nn, pn, ds);
-		if (this->id == 8)
-			this->id = 0;
-        this->max++;
-		break;
-	}
+        for (int i = this->max - 1; i > 0; i--)
+            this->contacts[i] = this->contacts[i - 1];
+        this->contacts[0].set_contact(fn, ln, nn, pn, ds);
+        if (this->max < 8)
+            this->max++;
+        break;
+    }
 }
 
 void PhoneBook::search(void)
 {
-	int 	index;
-    std::string  input;
+	int	index;
+    std::string	input;
     std::cout << std::endl << "     index|      name|  lastname|  nickname|";
     std::cout << std::endl << "--------------------------------------------" << std::endl;
 	for (int i = 0; i < this->max; i++)
@@ -96,8 +97,6 @@ void PhoneBook::search(void)
 	while (1)
 	{
 		std::cout << "Please write index that you want to show." << std::endl;
-
-
         if (std::cin >> input)
 		{
             if (!is_digit(input))
