@@ -1,4 +1,4 @@
-NAME = weapon
+NAME = file
 SRCS = main.cpp
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
