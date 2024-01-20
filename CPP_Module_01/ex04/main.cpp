@@ -5,7 +5,7 @@ using std::find;
 
 int main(int ac, char *argv[]) {
     if (ac != 4) {
-        std::cout << "You must enter 4 arguments." << std::endl;
+        std::cout << "You must enter 3 arguments." << std::endl;
         return (1);
     }
 
