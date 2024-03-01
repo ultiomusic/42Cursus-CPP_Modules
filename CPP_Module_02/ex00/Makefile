@@ -1,5 +1,5 @@
 NAME = fixed
-SRCS = Harl.cpp main.cpp
+SRCS = Fixed.cpp main.cpp
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
