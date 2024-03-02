@@ -3,8 +3,10 @@
 
 using std::find;
 
-int main(int ac, char *argv[]) {
-    if (ac != 4) {
+int main(int ac, char *argv[])
+{
+    if (ac != 4)
+    {
         std::cout << "You must enter 3 arguments." << std::endl;
         return (1);
     }
@@ -18,12 +20,16 @@ int main(int ac, char *argv[]) {
     int    findIn;
     std::string lines;
     std::string line;
-    if (infile.is_open()) {
-        while (std::getline(infile, line)) {
+    if (infile.is_open())
+    {
+        while (std::getline(infile, line))
+        {
             findIn = line.find(s1);
-            while (findIn != -1) {
+            while (findIn != -1)
+            {
                 findIn = line.find(s1);
-                if (findIn != -1) {
+                if (findIn != -1)
+                {
                     line.erase(findIn, s1.length());
                     line.insert(findIn, s2);
                 }
