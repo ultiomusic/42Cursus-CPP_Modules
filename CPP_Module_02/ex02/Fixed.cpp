@@ -28,6 +28,7 @@ Fixed &Fixed::min(Fixed &f1, Fixed &f2)
 {
     return ((f1.value > f2.value) ? f2 : f1);
 }
+
 Fixed &Fixed::max(Fixed &f1, Fixed &f2)
 {
     return ((f1.value > f2.value) ? f1 : f2);
@@ -37,6 +38,7 @@ const Fixed& Fixed::min(const Fixed &f1, const Fixed &f2)
 {
     return ((f1.value > f2.value) ? f2 : f1);
 }
+
 const Fixed& Fixed::max(const Fixed &f1, const Fixed &f2)
 {
     return ((f1.value > f2.value) ? f1 : f2);
