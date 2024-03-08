@@ -1,9 +1,9 @@
 #include "ScavTrap.hpp"
 
 int main() {
-    ScavTrap st("NARUTO");
+    ScavTrap st("FAKO");
 
-    st.attack("LUFFY");
+    st.attack("SONMEZ");
     st.beRepaired(200);
     st.guardGate();
     return (0);

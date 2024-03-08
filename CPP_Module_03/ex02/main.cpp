@@ -1,9 +1,10 @@
 #include "FragTrap.hpp"
 
-int main() {
-    FragTrap ft("NARUTO");
+int main()
+{
+    FragTrap ft("FAKO");
 
-    ft.attack("LUFFY");
+    ft.attack("SONMEZ");
     ft.beRepaired(200);
     ft.highFivesGuys();
     return (0);

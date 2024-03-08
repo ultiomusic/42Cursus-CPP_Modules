@@ -49,7 +49,6 @@ void ScavTrap::guardGate()
     std::cout << this->name << " is in gatekeeper mode." << std::endl;
 }
 
-ScavTrap::~ScavTrap()
-{
+ScavTrap::~ScavTrap(){
     std::cout << "ScavTrap class removed." << std::endl;
 }
