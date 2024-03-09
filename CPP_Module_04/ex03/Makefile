@@ -1,16 +1,56 @@
-NAME = animal
-SRCS = AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
-CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: maltun <maltun@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/03/02 00:43:27 by maltun            #+#    #+#              #
+#    Updated: 2024/03/03 19:49:39 by maltun           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-all: $(NAME)
 
-$(NAME): $(SRCS)
-	$(CC) $(FLAGS) $(SRCS) -o $(NAME)
+NAME = a.out
+
+SRC =	./AMateria.cpp \
+		./Ice.cpp \
+		./Cure.cpp \
+		./Character.cpp \
+		./MateriaSource.cpp \
+		./main.cpp
+
+OBJS =	./AMateria.o \
+		./Ice.o \
+		./Cure.o \
+		./Character.o \
+		./MateriaSource.o \
+		./main.o
+
+CC	= c++
+
+RM	= rm -rf
+
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 -Wshadow -g -fsanitize=address
+
+$(NAME):	$(OBJS)
+			@echo "\033[0;32m[OK]\033[0m Compiling\033[0m $@"
+			@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+
+$(OBJS):	$(SRC)
+			@$(CC) $(CFLAGS) -c $(SRC)
+			@echo "\033[0;32m[OK]\033[0m Compiling\033[0m $@"
+
+all:		$(NAME)
 
 clean:
-	rm -f $(NAME)
+			@$(RM) $(OBJS)
+			@echo "\033[0;32m[OK]\033[0m Removing objects\033[0m"
 
-fclean: clean
+fclean:		clean
+			@$(RM) $(NAME)
+			@echo "\033[0;32m[OK]\033[0m Removing $(NAME)\033[0m"
 
-re: fclean all
+re:			fclean all
+
+PHONY:		all clean fclean re
