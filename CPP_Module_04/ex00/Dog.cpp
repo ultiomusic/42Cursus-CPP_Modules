@@ -6,7 +6,7 @@ Dog::Dog()
 	std::cout << "The dog class is called." << std::endl;
 }
 
-Dog::Dog(const Dog &cpy)
+Dog::Dog(const Dog &cpy) :Animal()
 {
 	std::cout << "Dog copy constructor called." << std::endl;
 	*this = cpy;

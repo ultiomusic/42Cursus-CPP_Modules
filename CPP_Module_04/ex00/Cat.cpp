@@ -6,7 +6,7 @@ Cat::Cat()
 	std::cout << "The cat class is called." << std::endl;
 }
 
-Cat::Cat(const Cat &cpy)
+Cat::Cat(const Cat &cpy) :Animal()
 {
 	std::cout << "Cat copy constructor called." << std::endl;
 	*this = cpy;
@@ -24,7 +24,6 @@ void Cat::makeSound() const
 	std::cout << "meow, meow." << std::endl;
 }
 
-Cat::~Cat()
-{
+Cat::~Cat() {
 	std::cout << "The cat class has been destroyed." << std::endl;
 }
