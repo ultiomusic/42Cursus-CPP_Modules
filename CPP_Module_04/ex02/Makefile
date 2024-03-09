@@ -1,16 +1,14 @@
-NAME = animal
-SRCS = Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp main.cpp
-CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
+NAME	= animal
+CPP		= @c++
+FLAGS	= -std=c++98 -Wall -Wextra -Werror
+SRCS	= main.cpp AAnimal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 all: $(NAME)
 
-$(NAME): $(SRCS)
-	$(CC) $(FLAGS) $(SRCS) -o $(NAME)
+$(NAME):
+	$(CPP) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
-	rm -f $(NAME)
+	@rm -rf $(NAME)
 
 fclean: clean
-
-re: fclean all

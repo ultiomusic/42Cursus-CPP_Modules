@@ -1,16 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Character.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: maltun <maltun@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/02 00:42:46 by maltun            #+#    #+#             */
-/*   Updated: 2024/03/03 20:06:28 by maltun           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-
 #include "Character.hpp"
 
 Character::Character(void)
@@ -18,7 +5,7 @@ Character::Character(void)
 	std::cout << "Character default constructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->_inventory[i] = NULL;
-	this->_name = "dafault";
+	this->_name = "default";
 }
 
 Character::Character(const Character& obj)

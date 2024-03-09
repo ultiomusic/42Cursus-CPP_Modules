@@ -1,21 +1,33 @@
-#include "Animal.hpp"
-#include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongCat.hpp"
-#include "WrongAnimal.hpp"
+#include "Cat.hpp"
 
-int main()
+int main(void) 
 {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    const WrongAnimal* wrong = new WrongCat();
+	const Animal*	cat = new Cat();
+	const Animal*	dog = new Dog();
+	const Animal*	animal = new Animal();
 
-    i->makeSound();
-    j->makeSound();
-    wrong->makeSound();
+	delete	cat;
+	delete	dog;
+	delete	animal;
 
-    delete wrong;
-    delete j;
-    delete i;
-    return 0;
+	std::cout << "---------------------Extra Subject request--------------------" << std::endl;
+
+	int		len = 10;
+	int		k = 0;
+	Animal	*tab[len];
+
+	while (k < (len / 2))
+	{
+		tab[k] = new Dog();
+		k++;
+	}
+	while (k < len)
+	{
+		tab[k] = new Cat();
+		k++;
+	}
+	while (--k >= 0)
+		delete tab[k];
+	return (0);
 }

@@ -3,8 +3,7 @@
 
 #include <iostream>
 
-class Brain
-{
+class Brain {
 	private:
 		std::string ideas[100];
 	public:
