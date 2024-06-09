@@ -1,7 +1,8 @@
 NAME 	= bureaucrat
 CPP 	= @c++
 FLAGS	= -std=c++98 -Wall -Wextra -Werror
-SRCS 	= main.cpp Bureaucrat.cpp
+SRCS 	= 	main.cpp Bureaucrat.cpp AForm.cpp \
+			ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
 all: $(NAME)
 
