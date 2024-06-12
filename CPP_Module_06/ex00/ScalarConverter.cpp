@@ -23,16 +23,23 @@ void nanCases(const std::string str)
 {
 	std::cout << "char: impossible" << std::endl;
 	std::cout << "int: impossible" << std::endl;
-	if (str == "nanf") {
+	if (str == "nanf")
+	{
 		std::cout << "float: " << str << std::endl;
 		std::cout << "double: nan" << std::endl;
-	} else if (str == "-inff") {
+	} 
+	else if (str == "-inff")
+	{
 		std::cout << "float: " << str << std::endl;
 		std::cout << "double: -inf" << std::endl;
-	} else if (str == "+inff") {
+	}
+	else if (str == "+inff")
+	{
 		std::cout << "float: " << str << std::endl;
 		std::cout << "double: +inf" << std::endl;
-	} else {
+	}
+	else
+	{
 		std::cout << "float: " << str << "f" << std::endl;
 		std::cout << "double: " << str << std::endl;
 	}
@@ -42,22 +49,27 @@ void setType(const std::string& str)
 {
 	char type = 'i', flag = 0;
 	std::strtod(str.c_str(), NULL);
-	if (!std::isdigit(str.c_str()[0]) && str.length() == 1){
+	if (!std::isdigit(str.c_str()[0]) && str.length() == 1)
+	{
 		castChar(str);
 		return;
 	}
 	size_t i = 0;
 	if (str[i] == '+' || str[i] == '-')
 		i++;
-	for (;str[i];i++){
-		if ((i == (str.length() - 1)) && str[i] == 'f'){
-			if (type != 'x') {
+	for (;str[i];i++)
+	{
+		if ((i == (str.length() - 1)) && str[i] == 'f')
+		{
+			if (type != 'x')
+			{
 				castFloat(str);
 				return;
 			}
 			return nothingType();
 		}
-		else if (str[i] == '.' && flag == 0){
+		else if (str[i] == '.' && flag == 0)
+		{
 			type = 'd';
 			flag = 1;
 		}
@@ -93,7 +105,7 @@ void castChar(std::string str)
 		std::cout << "int: " << i << std::endl;
 		std::cout << "float: " << std::fixed << std::setprecision(1) << f << "f" << std::endl;
 		std::cout << "double: " << std::fixed << std::setprecision(1) << d << std::endl;
-	}
+	} 
 	else
 	{
 		std::cout << "This character aren't printable" << std::endl;

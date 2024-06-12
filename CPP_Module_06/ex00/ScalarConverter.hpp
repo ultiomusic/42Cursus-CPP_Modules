@@ -5,8 +5,7 @@
 #include <iomanip>
 #include <sstream>
 
-class ScalarConverter
-{
+class ScalarConverter {
 	public:
 		ScalarConverter();
 		ScalarConverter(const ScalarConverter &cpy);

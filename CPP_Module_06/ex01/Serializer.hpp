@@ -10,7 +10,8 @@ struct Data
     int age;
 };
 
-class Serializer {
+class Serializer
+{
     public:
         Serializer();
         Serializer(const Serializer &cpy);
